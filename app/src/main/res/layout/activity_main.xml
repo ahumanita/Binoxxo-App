@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="#ffffff"
+tools:context=".MainActivity">
+
+<TableLayout
+    android:id="@+id/tableLayout"
+    android:layout_width="328dp"
+    android:layout_height="328dp"
+    android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    app:layout_constraintBottom_toTopOf="@+id/button_reload"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/button_black">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry0"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry1"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry2"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry3"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry4"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry5"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry6"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry7"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry8"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry9"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry10"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry11"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry12"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry13"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry14"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry15"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry16"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry17"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry18"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry19"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry20"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry21"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry22"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry23"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry24"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry25"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry26"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry27"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry28"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry29"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry30"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry31"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry32"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry33"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry34"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry35"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry36"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry37"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry38"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry39"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry40"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry41"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry42"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry43"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry44"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry45"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry46"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry47"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry48"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry49"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry50"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry51"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry52"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry53"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry54"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry55"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry56"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry57"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry58"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry59"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry60"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry61"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry62"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+        <com.example.myapplication.SpinnerPlus
+            android:id="@+id/Entry63"
+            android:layout_width="41dp"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:background="@null"></com.example.myapplication.SpinnerPlus>
+
+    </TableRow>
+
+</TableLayout>
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/button_check"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:onClick="check"
+    android:text="Check"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/button_reload"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/button_reload"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:onClick="reload"
+    android:text="Reload"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toStartOf="@+id/button_new"
+    app:layout_constraintStart_toEndOf="@+id/button_check"
+    app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/button_new"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorPrimaryDark"
+    android:onClick="load_new"
+    android:text="New"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/button_reload"
+    app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/button_black"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="#000000"
+    android:onClick="color_black"
+    app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+    app:layout_constraintEnd_toStartOf="@+id/button_blue"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.913" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/button_blue"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="#0000ff"
+    android:onClick="color_blue"
+    app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+    app:layout_constraintEnd_toStartOf="@+id/button_red"
+    app:layout_constraintStart_toEndOf="@+id/button_black"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/button_red"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="#ff0000"
+    android:onClick="color_red"
+    app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/button_blue"
+    app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
