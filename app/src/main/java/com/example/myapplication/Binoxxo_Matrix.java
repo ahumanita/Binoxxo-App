@@ -113,63 +113,50 @@ public class Binoxxo_Matrix {
         return this.has_exactly_four_xo_in_rowcol();
     }
 
-    private boolean has_unique_rowcol() {
-        int[][] trans = this.transpose();
-        int count = 0;
-        boolean holds = false;
-
-        //check matrix
-        for (int row = 0; row < this.rows; row++) {
-            //cant check uniqueness if two entries are missing
-            count = 0;
-            holds = false;
-            for (int a = 0; a < this.cols; a++) {
-                if (this.matrix[row][a] == this.init) {
-                    count += 1;
+    private boolean has_unique_rows(int[][] matrix) {
+        /* CHECK MATRIX FOR UNIQUE ROWS
+        * Iterate over row pairs and check for each column
+        * if the entry is equal. If so, we continue until
+        * we reach the end of the column. This means, that
+        * the two rows are the same and thus, not all rows
+        * are unique.
+        * In case of an unequal entry, we can break the
+        * current loop to save computation time.
+        *
+        * Args:
+        *   matrix: Integer matrix
+        *
+        * Return:
+        *   boolean: Boolean showing if rows are unique or not
+        * */
+        int rows = matrix.length;
+        int cols = matrix[0].length;
+        // Check each row against each row
+        for (int row1 = 0; row1 < rows; row1++) {
+            for (int row2 = row1 + 1; row2 < rows; row2++) {
+                for (int col = 0; col < cols; col++) {
+                    if (matrix[row1][col] == matrix[row2][col]) {
+                        if (col == cols - 1) {
+                            return false;
+                        }
+                    }
+                    else {
+                        break;
+                    }
                 }
-            }
-            if (count >= 2) {
-                holds = true;
-            }
-
-            for (int col = 0; col < this.cols; col++) {
-                if (this.matrix[row] != this.matrix[col]) {
-                    holds = true;
-                }
-            }
-            if (!holds) {
-                return holds;
-            }
-        }
-
-        //check transposed
-        count = 0;
-        for (int col = 0; col < this.cols; col++) {
-            //cant check uniqueness if two entries are missing
-            count = 0;
-            for (int a = 0; a < this.cols; a++) {
-                if (trans[col][a] == this.init) {
-                    count += 1;
-                }
-            }
-            if (count >= 2) {
-                holds = true;
-            }
-
-            for (int row = 0; row < this.rows; row++) {
-                if (trans[col] != trans[row]) {
-                    holds = true;
-                }
-            }
-            if (!holds) {
-                return holds;
             }
         }
         return true;
     }
 
     public boolean rule_unique() {
-        return this.has_unique_rowcol();
+        /* CHECK UNIQUENESS RULE
+        * Check on uniqueness in rows and columns by
+        * checking for uniqueness in rows for matrix
+        * and transposed matrix.
+        * */
+        int[][] transpose = this.transpose();
+        return (this.has_unique_rows(this.matrix) && this.has_unique_rows(transpose));
     }
 
     public boolean is_valid() {
