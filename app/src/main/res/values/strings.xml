@@ -3,4 +3,14 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="title_rules">Rules</string>
+    <string name="title_settings">Settings</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="rule_1">
+        <b><big>Rule 1</big></b><br></br>
+        In each row and column of a Binoxxo there must be equally many "X" and "O".
+        If the Binoxxo has 8 columns and 8 rows, there must be 4 "X" and 4 "O" in each row and
+        column.
+    </string>
 </resources>

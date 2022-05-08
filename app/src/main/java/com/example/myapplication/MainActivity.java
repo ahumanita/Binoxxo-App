@@ -2,24 +2,41 @@ package com.example.myapplication;
 
 import android.os.Bundle;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.myapplication.databinding.ActivityMainBinding;
 
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
 import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
+import com.google.android.material.navigation.NavigationView;
+
+import androidx.annotation.NonNull;
+import android.view.MenuItem;
 
 
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
+    private ActivityMainBinding binding;
+    public DrawerLayout drawerLayout;
+    public ActionBarDrawerToggle actionBarDrawerToggle;
 
     List<String> selection = Arrays.asList("X","O"," ");
 
@@ -56,7 +73,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         Resources r = getResources();
         String pack = getPackageName();
@@ -97,6 +116,38 @@ public class MainActivity extends AppCompatActivity {
         }
 
         this._reload();
+
+        // drawer layout instance to toggle the menu icon to open
+        // drawer and back button to close drawer
+        drawerLayout = findViewById(R.id.drawer_layout);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
+
+        // pass the Open and Close toggle for the drawer layout listener
+        // to toggle the button
+        drawerLayout.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.syncState();
+
+        // to make the Navigation drawer icon always appear on the action bar
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        // Set listener for navigation drawer
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+    }
+
+
+    // override the onOptionsItemSelected()
+    // function to implement
+    // the item click listener callback
+    // to open and close the navigation
+    // drawer when the icon is clicked
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -226,5 +277,42 @@ public class MainActivity extends AppCompatActivity {
     private void color_default()
     {
         edit_color = "#000000";
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        // Handle navigation view item clicks here.
+        switch (item.getItemId()) {
+
+            case R.id.nav_rules: {
+                // inflate the layout of the popup window
+                LayoutInflater inflater = (LayoutInflater)
+                        getSystemService(LAYOUT_INFLATER_SERVICE);
+                View popupView = inflater.inflate(R.layout.popup_window, null);
+
+                // create the popup window
+                int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+                int height = LinearLayout.LayoutParams.WRAP_CONTENT;
+                boolean focusable = true; // lets taps outside the popup also dismiss it
+                final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+
+                // show the popup window
+                // which view you pass in doesn't matter, it is only used for the window tolken
+                popupWindow.showAtLocation(drawerLayout, Gravity.CENTER, 0, 0);
+
+                // dismiss the popup window when touched
+                popupView.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+                        popupWindow.dismiss();
+                        return true;
+                    }
+                });
+            }
+        }
+        //close navigation drawer
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
     }
 }
