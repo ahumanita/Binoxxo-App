@@ -13,4 +13,16 @@
         If the Binoxxo has 8 columns and 8 rows, there must be 4 <i>X</i> and 4 <i>O</i> in each row and
             column.</big></b>
     </string>
+    <string name="rule_2">
+        <b><big><big>Rule 2</big></big></b> \n
+        <b><big>No more than 2 equal symbols are allowed next to each other. Meaning, no more than
+        2 <i>X</i> or 2 <i>O</i> following each other. If for example there are 3 <i>X</i> next to
+        each other in the Binoxxo (in a row or a column) it is invalid.</big></b>
+    </string>
+    <string name="rule_3">
+        <b><big><big>Rule 3</big></big></b> \n
+        <b><big>All rows must be unique and all columns must be unique. If there are two identical rows
+        or two identical columns, the Binoxxo is invalid.</big></b>
+    </string>
+    <string name="rule_counter">1/3</string>
 </resources>

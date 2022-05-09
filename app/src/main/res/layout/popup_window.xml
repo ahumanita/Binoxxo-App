@@ -19,6 +19,7 @@
         android:textColor="@color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -28,6 +29,7 @@
         app:layout_constraintStart_toStartOf="@+id/rule_text" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/continue_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -35,5 +37,18 @@
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="@+id/rule_text"
         app:layout_constraintEnd_toEndOf="@+id/rule_text" />
+
+    <TextView
+        android:id="@+id/rule_counter_text"
+        android:layout_width="48dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="@string/rule_counter"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/continue_button"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toEndOf="@+id/back_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout >

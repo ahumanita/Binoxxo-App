@@ -1,13 +1,11 @@
 package com.example.myapplication;
 
-import android.os.Bundle;
-
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+import android.os.Bundle;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
-
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -19,15 +17,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
 import android.widget.TextView;
 import com.google.android.material.navigation.NavigationView;
-
 import androidx.annotation.NonNull;
 import android.view.MenuItem;
-
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,12 +34,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActivityMainBinding binding;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
+    private PopupWindow popupWindow;
 
     List<String> selection = Arrays.asList("X","O"," ");
 
     Binoxxo binoxxo;
     int[][] binoxxo_matrix;
 
+    // TODO fix these strings?
     public static final String CHECK_TEXT = "com.example.anita.binoxxo.check_text";
     public static final String CHECK_COLOR = "com.example.anita.binoxxo.check_color";
     public static final String VALID_ERROR = "com.example.anita.binoxxo.error_msg";
@@ -52,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String check_color = "#000000";
     String error_msg = "";
     static String edit_color = "#000000";
+
+    public int current_rule = 0;
 
     private void create_binoxxo()
     {
@@ -286,22 +287,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
 
             case R.id.nav_rules: {
-                // inflate the layout of the popup window
+                // Inflate the layout of the popup window
                 LayoutInflater inflater = (LayoutInflater)
                         getSystemService(LAYOUT_INFLATER_SERVICE);
                 View popupView = inflater.inflate(R.layout.popup_window, null);
 
-                // create the popup window
+                // Create the popup window
                 int width = LinearLayout.LayoutParams.WRAP_CONTENT;
                 int height = LinearLayout.LayoutParams.WRAP_CONTENT;
                 boolean focusable = true; // lets taps outside the popup also dismiss it
                 final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
+                this.popupWindow = popupWindow;
 
-                // show the popup window
-                // which view you pass in doesn't matter, it is only used for the window tolken
+                // Show the popup window
                 popupWindow.showAtLocation(drawerLayout, Gravity.CENTER, 0, 0);
 
-                // dismiss the popup window when touched
+                // Dismiss the popup window when touched
                 popupView.setOnTouchListener(new View.OnTouchListener() {
                     @Override
                     public boolean onTouch(View v, MotionEvent event) {
@@ -309,9 +310,45 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         return true;
                     }
                 });
+
+                int[] rules = {R.string.rule_1, R.string.rule_2, R.string.rule_3};
+
+                // Set new text when button "Continue" is clicked
+                final Button button_continue = (Button) popupView.findViewById(R.id.continue_button);
+                button_continue.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        if (current_rule < rules.length - 1) {
+                            current_rule = current_rule + 1;
+                            TextView counter_text = (TextView) popupWindow.getContentView().findViewById(R.id.rule_counter_text);
+                            counter_text.setText(String.format("%d/%d",current_rule+1,rules.length));
+                        }
+                        else {
+                            return;
+                        }
+                        TextView editable = (TextView) popupWindow.getContentView().findViewById(R.id.rule_text);
+                        editable.setText(rules[current_rule]);
+                    }
+                });
+
+                // Set previous text when button "Back" is clicked
+                final Button button_back = (Button) popupView.findViewById(R.id.back_button);
+                button_back.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        if (current_rule > 0) {
+                            current_rule = current_rule - 1;
+                            TextView counter_text = (TextView) popupWindow.getContentView().findViewById(R.id.rule_counter_text);
+                            counter_text.setText(String.format("%d/%d",current_rule+1,rules.length));
+                        }
+                        else {
+                            return;
+                        }
+                        TextView editable = (TextView) popupWindow.getContentView().findViewById(R.id.rule_text);
+                        editable.setText(rules[current_rule]);
+                    }
+                });
             }
         }
-        //close navigation drawer
+        // Close navigation drawer
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
