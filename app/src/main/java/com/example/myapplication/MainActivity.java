@@ -2,12 +2,19 @@ package com.example.myapplication;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.LayerDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -18,6 +25,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Spinner;
@@ -34,7 +42,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActivityMainBinding binding;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
-    private PopupWindow popupWindow;
 
     List<String> selection = Arrays.asList("X","O"," ");
 
@@ -51,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String check_color = "#000000";
     String error_msg = "";
     static String edit_color = "#000000";
+    int stroke_width = 220;
 
     public int current_rule = 0;
 
@@ -71,12 +79,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+    protected void initializeButtonColor(ImageButton button, String color) {
+        /* Initialize background colors of the buttons for setting font color */
+        StateListDrawable listDrawable = (StateListDrawable) button.getBackground();
+        for(int i = 0; i < 2; i++) {
+            GradientDrawable shapeDrawable = (GradientDrawable) listDrawable.getStateDrawable(i);
+            // This didn't work with setColor(R.color.red) seems that somethings goes wrong
+            // when not parsing color first
+            shapeDrawable.setColor(Color.parseColor(color));
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        ImageButton red_button = findViewById(R.id.button_red);
+        ImageButton blue_button = findViewById(R.id.button_blue);
+        ImageButton black_button = findViewById(R.id.button_black);
+        this.initializeButtonColor(red_button,getResources().getString(R.color.red));
+        this.initializeButtonColor(blue_button,getResources().getString(R.color.blue));
+        this.initializeButtonColor(black_button,getResources().getString(R.color.black));
+        red_button.setOnClickListener(view -> {
+            red_button.setSelected(true);
+            blue_button.setSelected(false);
+            black_button.setSelected(false);
+            edit_color = getResources().getString(R.color.red);
+        });
+        blue_button.setOnClickListener(view -> {
+            blue_button.setSelected(true);
+            red_button.setSelected(false);
+            black_button.setSelected(false);
+            edit_color = getResources().getString(R.color.blue);
+        });
+        black_button.setOnClickListener(view -> {
+            black_button.setSelected(true);
+            red_button.setSelected(false);
+            blue_button.setSelected(false);
+            edit_color = getResources().getString(R.color.black);
+        });
 
         Resources r = getResources();
         String pack = getPackageName();
@@ -272,7 +315,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public void color_red(View view)
     {
-        edit_color = "#ff0000";
+        edit_color = getResources().getString(R.color.red);
+        /*
+        GradientDrawable red_background = (GradientDrawable) findViewById(R.id.button_red).getBackground();
+        red_background.setStroke(stroke_width, getResources().getColor(R.color.blue));
+        findViewById(R.id.button_red).setBackgroundDrawable(red_background);
+        GradientDrawable blue_background = (GradientDrawable) findViewById(R.id.button_blue).getBackground();
+        blue_background.setStroke(stroke_width, getResources().getColor(R.color.white));
+        GradientDrawable black_background = (GradientDrawable) findViewById(R.id.button_black).getBackground();
+        black_background.setStroke(stroke_width, getResources().getColor(R.color.white));
+         */
     }
 
     private void color_default()
@@ -297,7 +349,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 int height = LinearLayout.LayoutParams.WRAP_CONTENT;
                 boolean focusable = true; // lets taps outside the popup also dismiss it
                 final PopupWindow popupWindow = new PopupWindow(popupView, width, height, focusable);
-                this.popupWindow = popupWindow;
 
                 // Show the popup window
                 popupWindow.showAtLocation(drawerLayout, Gravity.CENTER, 0, 0);

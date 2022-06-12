@@ -108,6 +108,10 @@ public class Binoxxo
 
     private void rule1_col(int row)
     {
+        /*
+        * Execute rule 1 for all columns, that is
+        *
+        * */
         int[][] matrix = this.matrix.get_matrix();
         if (row > 1)
         {
