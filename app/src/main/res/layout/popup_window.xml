@@ -16,7 +16,7 @@
         android:maxEms="15"
         android:padding="16dp"
         android:text="@string/rule_1"
-        android:textColor="@color/black" />
+        android:textColor="@color/white" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/back_button"
@@ -25,6 +25,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="8dp"
         android:text="Back"
+        android:background="@drawable/action_button"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/rule_text"
         app:layout_constraintStart_toStartOf="@+id/rule_text" />
 
@@ -34,7 +36,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
-        android:text="Continue"
+        android:text="Next"
+        android:background="@drawable/action_button"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/rule_text"
         app:layout_constraintEnd_toEndOf="@+id/rule_text" />
 
@@ -45,7 +49,7 @@
         android:layout_marginBottom="24dp"
         android:gravity="center"
         android:text="@string/rule_counter"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/continue_button"
         app:layout_constraintHorizontal_bias="0.615"
