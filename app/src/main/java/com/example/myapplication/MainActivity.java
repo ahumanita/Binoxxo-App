@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     String check_text = "";
     String check_color = "#000000";
     String error_msg = "";
+    static String hint_color = "#000000";
     static String edit_color = "#000000";
     int stroke_width = 220;
 
@@ -240,6 +241,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.binoxxo.reload_grid();
 
         this.set_spinner_selection();
+        ImageButton black_button = findViewById(R.id.button_black);
+        black_button.performClick();
     }
 
     private void _reload()
@@ -248,6 +251,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.binoxxo.reload_grid();
 
         this.set_spinner_selection();
+        ImageButton black_button = findViewById(R.id.button_black);
+        black_button.performClick();
     }
 
     public void reload(View view)
@@ -301,30 +306,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         intent.putExtra(CHECK_COLOR,check_color);
         intent.putExtra(VALID_ERROR,error_msg);
         startActivity(intent);
-    }
-
-    public void color_black(View view)
-    {
-        edit_color = "#000000";
-    }
-
-    public void color_blue(View view)
-    {
-        edit_color = "#0000ff";
-    }
-
-    public void color_red(View view)
-    {
-        edit_color = getResources().getString(R.color.red);
-        /*
-        GradientDrawable red_background = (GradientDrawable) findViewById(R.id.button_red).getBackground();
-        red_background.setStroke(stroke_width, getResources().getColor(R.color.blue));
-        findViewById(R.id.button_red).setBackgroundDrawable(red_background);
-        GradientDrawable blue_background = (GradientDrawable) findViewById(R.id.button_blue).getBackground();
-        blue_background.setStroke(stroke_width, getResources().getColor(R.color.white));
-        GradientDrawable black_background = (GradientDrawable) findViewById(R.id.button_black).getBackground();
-        black_background.setStroke(stroke_width, getResources().getColor(R.color.white));
-         */
     }
 
     private void color_default()
