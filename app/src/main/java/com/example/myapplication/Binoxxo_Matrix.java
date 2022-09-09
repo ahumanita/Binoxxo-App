@@ -28,6 +28,15 @@ public class Binoxxo_Matrix {
         }
     }
 
+    public Binoxxo_Matrix(int rows, int cols, int[][] matrix) {
+        if (rows % 2 != 0 || rows != cols) {
+            throw new RuntimeException("Need even number of rows and columns and they must be equal.");
+        }
+        this.rows = rows;
+        this.cols = cols;
+        this.matrix=matrix;
+    }
+
     public int[][] get_matrix() {
         //TODO: brauch ich hier deepcopy?
         return this.matrix;

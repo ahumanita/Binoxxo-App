@@ -45,6 +45,18 @@ public class Binoxxo
         }
     }
 
+    public Binoxxo(int rows, int cols, int[][] iMatrix, int[][] iOriginal, int[][] iSolution) {
+        if (rows % 2 != 0 || rows != cols)
+        {
+            throw new RuntimeException("Need even number of rows and columns and they must be equal.");
+        }
+        this.rows = rows;
+        this.cols = cols;
+        this.matrix = new Binoxxo_Matrix(rows,cols,iMatrix);
+        this.original = new Binoxxo_Matrix(rows,cols,iOriginal);
+        this.solution = new Binoxxo_Matrix(rows,cols,iSolution);
+    }
+
 
     //operations after creation
     public void set_entry(int row,int col,int entry)

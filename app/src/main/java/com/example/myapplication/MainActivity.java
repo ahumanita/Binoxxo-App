@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
@@ -18,6 +20,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -63,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public int current_rule = 0;
 
+    public static final String mainPreferences = "MyPrefs" ;
+    SharedPreferences sharedPreferences;
+
     private void create_binoxxo()
     {
         int it = 0;
@@ -79,6 +85,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this.binoxxo.solution.print_matrix();
     }
 
+    private void load_binoxxo(Bundle savedInstanceState)
+    {
+        int num_rows = savedInstanceState.getInt("num_rows");
+        int num_cols = savedInstanceState.getInt("num_cols");
+        int[][] matrix = new int[num_rows][num_cols];
+        int[][] original = new int[num_rows][num_cols];
+        int[][] solution = new int[num_rows][num_cols];
+        for(int row = 0; row < num_rows; row ++) {
+            matrix[row] = savedInstanceState.getIntArray(String.format("matrix_row_%i",row));
+            original[row] = savedInstanceState.getIntArray(String.format("original_row_%i",row));
+            solution[row] = savedInstanceState.getIntArray(String.format("solution_row_%i",row));
+        }
+        this.binoxxo = new Binoxxo(num_rows,num_cols,matrix,original,solution);
+        this.binoxxo_matrix = this.binoxxo.matrix.get_matrix();
+        this.binoxxo.solution.print_matrix();
+    }
+
+    private void load_binoxxo(SharedPreferences preferences) {
+        int num_rows = preferences.getInt("num_rows",8);
+        int num_cols = preferences.getInt("num_cols",8);
+        int[][] matrix = new int[num_rows][num_cols];
+        int[][] original = new int[num_rows][num_cols];
+        int[][] solution = new int[num_rows][num_cols];
+
+        this.create_binoxxo();
+        int[][] default_matrix = this.binoxxo.matrix.matrix;
+        int[][] default_solution = this.binoxxo.original.matrix;
+        int[][] default_original = this.binoxxo.solution.matrix;
+
+        for(int row = 0; row < num_rows; row ++) {
+            for(int col= 0; col < num_cols; col++) {
+                matrix[row][col] = preferences.getInt(String.format("matrix_row_%o_%o", row,col),default_matrix[row][col]);
+                original[row][col] = preferences.getInt(String.format("original_row_%o_%o", row,col),default_original[row][col]);
+                solution[row][col] = preferences.getInt(String.format("solution_row_%o_%o", row,col),default_solution[row][col]);
+            }
+        }
+        this.binoxxo = new Binoxxo(num_rows,num_cols,matrix,original,solution);
+        this.binoxxo_matrix = this.binoxxo.matrix.get_matrix();
+        this.binoxxo.matrix.print_matrix();
+    }
+
 
     protected void initializeButtonColor(ImageButton button, String color) {
         /* Initialize background colors of the buttons for setting font color */
@@ -89,6 +136,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // when not parsing color first
             shapeDrawable.setColor(Color.parseColor(color));
         }
+    }
+
+    private void _initialize()
+    {
+        this.color_default();
+
+        this.set_spinner_selection();
+        ImageButton black_button = findViewById(R.id.button_black);
+        black_button.performClick();
     }
 
     @Override
@@ -125,7 +181,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Resources r = getResources();
         String pack = getPackageName();
 
-        this.create_binoxxo();
+        if (savedInstanceState != null && savedInstanceState.getBoolean("saved_binoxxo")) {
+            this.load_binoxxo(savedInstanceState);
+        }
+        else {
+            Log.w("OnCreate","Loading shared preference");
+            sharedPreferences = getSharedPreferences(mainPreferences,Context.MODE_PRIVATE);
+            this.load_binoxxo(sharedPreferences);
+            Log.w("OnCreate","Loaded shared preference");
+        }
 
         for(int i = 0; i < 8; i++)
         {
@@ -133,13 +197,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             {
                 int id = r.getIdentifier("Entry" + Integer.toString(i*8 + j), "id", pack);
                 SpinnerPlus field = (SpinnerPlus) findViewById(id);
-                //Spinner field = (Spinner) findViewById(id);
 
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, selection);
                 field.setAdapter(adapter);
 
-                //make color changing possible
-                //field.setOnItemSelectedEvenIfUnchangedListener(new AdapterView.OnItemSelectedListener()
                 field.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
                 {
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
@@ -160,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         }
 
-        this._reload();
+        this._initialize();
 
         // drawer layout instance to toggle the menu icon to open
         // drawer and back button to close drawer
@@ -210,10 +271,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 SpinnerPlus field = (SpinnerPlus) findViewById(id);
 
                 //set default values and en/disabled
-                if (this.binoxxo_matrix[i][j] == 9)
+                if (this.binoxxo.original.matrix[i][j] == 9)
                 {
                     field.setSelection(2);
                     field.setEnabled(true);
+                    if (this.binoxxo_matrix[i][j] == 1) {
+                        Log.i("Spinner","Matrix is 1 where Original is 9");
+                        field.setSelection(0, false);
+                    }
+                    else if (this.binoxxo_matrix[i][j] == 0)
+                    {
+                        field.setSelection(1, false);
+                    }
                 }
                 else
                 {
@@ -260,33 +329,40 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         this._reload();
     }
 
-    public void check(View view)
-    {
-        Binoxxo_Matrix actual = new Binoxxo_Matrix(8,8,9);
-
+    public Binoxxo_Matrix get_current_matrix() {
+        int rows = this.binoxxo.rows;
+        int cols = this.binoxxo.cols;
+        int init = this.binoxxo.matrix.init;
+        Binoxxo_Matrix current = new Binoxxo_Matrix(rows,cols,init);
         Resources r = getResources();
         String pack = getPackageName();
-        for(int i = 0; i < 8; i++)
+        for(int i = 0; i < rows; i++)
         {
-            for(int j = 0; j < 8; j++)
+            for(int j = 0; j < cols; j++)
             {
-                int id = r.getIdentifier("Entry" + Integer.toString(i*8 + j), "id", pack);
+                int id = r.getIdentifier("Entry" + Integer.toString(i*cols + j), "id", pack);
                 Spinner field = (Spinner) findViewById(id);
                 int val = field.getSelectedItemPosition();
                 if (val == 0)
                 {
-                    actual.matrix[i][j] = 1;
+                    current.matrix[i][j] = 1;
                 }
                 else if (val == 1)
                 {
-                    actual.matrix[i][j] = 0;
+                    current.matrix[i][j] = 0;
                 }
                 else
                 {
-                    actual.matrix[i][j] = 9;
+                    current.matrix[i][j] = init;
                 }
             }
         }
+        return current;
+    }
+
+    public void check(View view)
+    {
+        Binoxxo_Matrix actual = this.get_current_matrix();
 
         if (actual.is_valid())
         {
@@ -383,5 +459,52 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Close navigation drawer
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        outState.putString("edit_color",edit_color);
+        outState.putInt("num_cols",this.binoxxo.cols);
+        outState.putInt("num_rows",this.binoxxo.rows);
+        outState.putBoolean("saved_binoxxo",true);
+        Binoxxo_Matrix current_matrix = this.get_current_matrix();
+        for(int row = 0; row < this.binoxxo.rows; row++) {
+            outState.putIntArray(String.format("matrix_row_%o",row),current_matrix.matrix[row]);
+            outState.putIntArray(String.format("original_row_%o",row),this.binoxxo.original.matrix[row]);
+            outState.putIntArray(String.format("solution_row_%o",row),this.binoxxo.solution.matrix[row]);
+        }
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        edit_color=savedInstanceState.getString("edit_color");
+        super.onRestoreInstanceState(savedInstanceState);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        sharedPreferences = getSharedPreferences(mainPreferences,Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("edit_color",edit_color);
+        editor.putInt("num_cols",this.binoxxo.cols);
+        editor.putInt("num_rows",this.binoxxo.rows);
+        editor.putBoolean("saved_binoxxo",true);
+        Binoxxo_Matrix current_matrix = this.get_current_matrix();
+        for(int row = 0; row < this.binoxxo.rows; row++) {
+            for(int col = 0; col < this.binoxxo.cols; col++) {
+                editor.putInt(String.format("matrix_row_%o_%o", row,col), current_matrix.matrix[row][col]);
+                editor.putInt(String.format("original_row_%o_%o", row,col), this.binoxxo.original.matrix[row][col]);
+                editor.putInt(String.format("solution_row_%o_%o", row,col), this.binoxxo.solution.matrix[row][col]);
+            }
+        }
+        editor.commit();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        this.onPause();
     }
 }
