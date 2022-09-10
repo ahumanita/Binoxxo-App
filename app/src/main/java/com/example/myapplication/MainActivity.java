@@ -9,6 +9,7 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.StateListDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -454,6 +455,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editable.setText(rules[current_rule]);
                     }
                 });
+            }
+            case R.id.nav_feedback: {
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.setData(Uri.parse("mailto:"));
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{"contact@anco-design.de"});
+                email.putExtra(Intent.EXTRA_SUBJECT, "Binoxxo App Feedback");
+                email.setType("message/rfc822");
+                startActivity(Intent.createChooser(email, "Choose an Email client :"));
             }
         }
         // Close navigation drawer
