@@ -1,13 +1,10 @@
-package com.example.myapplication;
+package com.example.ancos_binoxxo;
 
-import com.example.myapplication.databinding.ActivityMainBinding;
+import com.example.ancos_binoxxo.databinding.ActivityMainBinding;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.LayerDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -16,8 +13,6 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -463,6 +458,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 email.putExtra(Intent.EXTRA_SUBJECT, "Binoxxo App Feedback");
                 email.setType("message/rfc822");
                 startActivity(Intent.createChooser(email, "Choose an Email client :"));
+            }
+            case R.id.nav_about: {
+                Intent intent = new Intent(MainActivity.this,AboutActivity.class);
+                startActivity(intent);
             }
         }
         // Close navigation drawer

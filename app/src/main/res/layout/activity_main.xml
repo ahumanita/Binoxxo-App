@@ -33,122 +33,122 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry0"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry1"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry2"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry3"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry4"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry5"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry6"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry7"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry8"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry9"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry10"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry11"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry12"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry13"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry14"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry15"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 
@@ -156,61 +156,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry16"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry17"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry18"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry19"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry20"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry21"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry22"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry23"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 
@@ -218,61 +218,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry24"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry25"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry26"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry27"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry28"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry29"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry30"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry31"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 
@@ -280,61 +280,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry32"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry33"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry34"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry35"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry36"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry37"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry38"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry39"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 
@@ -342,61 +342,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry40"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry41"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry42"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry43"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry44"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry45"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry46"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry47"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 
@@ -404,61 +404,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry48"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry49"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry50"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry51"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry52"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry53"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry54"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry55"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 
@@ -466,61 +466,61 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry56"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry57"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry58"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry59"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry60"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry61"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry62"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
-                <com.example.myapplication.SpinnerPlus
+                <com.example.ancos_binoxxo.SpinnerPlus
                     android:id="@+id/Entry63"
                     android:layout_width="41dp"
                     android:layout_height="41dp"
                     android:background="@null"
-                    android:gravity="center"></com.example.myapplication.SpinnerPlus>
+                    android:gravity="center"></com.example.ancos_binoxxo.SpinnerPlus>
 
             </TableRow>
 

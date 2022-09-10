@@ -9,4 +9,8 @@
         android:id="@+id/nav_feedback"
         android:title="Feedback" />
 
+    <item
+        android:id="@+id/nav_about"
+        android:title="About" />
+
 </menu>

@@ -1,6 +1,4 @@
-package com.example.myapplication;
-
-import com.example.myapplication.Binoxxo_Matrix;
+package com.example.ancos_binoxxo;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,9 +1,7 @@
-package com.example.myapplication;
+package com.example.ancos_binoxxo;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.AdapterView;
-import android.widget.Spinner;
 
 import androidx.appcompat.widget.AppCompatSpinner;
 

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.ancos_binoxxo;
 
 import android.util.Log;
 

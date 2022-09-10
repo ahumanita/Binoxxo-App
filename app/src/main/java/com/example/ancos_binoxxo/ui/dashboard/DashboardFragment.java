@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.dashboard;
+package com.example.ancos_binoxxo.ui.dashboard;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.myapplication.databinding.FragmentDashboardBinding;
+import com.example.ancos_binoxxo.databinding.FragmentDashboardBinding;
 
 public class DashboardFragment extends Fragment {
 
