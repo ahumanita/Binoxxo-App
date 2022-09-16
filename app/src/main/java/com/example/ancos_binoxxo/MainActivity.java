@@ -450,6 +450,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         editable.setText(rules[current_rule]);
                     }
                 });
+                break;
             }
             case R.id.nav_feedback: {
                 Intent email = new Intent(Intent.ACTION_SEND);
@@ -458,10 +459,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 email.putExtra(Intent.EXTRA_SUBJECT, "Binoxxo App Feedback");
                 email.setType("message/rfc822");
                 startActivity(Intent.createChooser(email, "Choose an Email client :"));
+                break;
             }
             case R.id.nav_about: {
                 Intent intent = new Intent(MainActivity.this,AboutActivity.class);
                 startActivity(intent);
+                break;
             }
         }
         // Close navigation drawer
