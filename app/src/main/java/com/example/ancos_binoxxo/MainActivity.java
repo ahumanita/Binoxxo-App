@@ -176,15 +176,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         Resources r = getResources();
         String pack = getPackageName();
+        sharedPreferences = getSharedPreferences(mainPreferences,Context.MODE_PRIVATE);
 
         if (savedInstanceState != null && savedInstanceState.getBoolean("saved_binoxxo")) {
             this.load_binoxxo(savedInstanceState);
         }
-        else {
+        else if (sharedPreferences.contains("initialized")) {
             Log.w("OnCreate","Loading shared preference");
-            sharedPreferences = getSharedPreferences(mainPreferences,Context.MODE_PRIVATE);
             this.load_binoxxo(sharedPreferences);
             Log.w("OnCreate","Loaded shared preference");
+        }
+        else {
+            this.create_binoxxo();
         }
 
         for(int i = 0; i < 8; i++)
@@ -498,6 +501,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onPause();
         sharedPreferences = getSharedPreferences(mainPreferences,Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("initialized", true);
         editor.putString("edit_color",edit_color);
         editor.putInt("num_cols",this.binoxxo.cols);
         editor.putInt("num_rows",this.binoxxo.rows);
