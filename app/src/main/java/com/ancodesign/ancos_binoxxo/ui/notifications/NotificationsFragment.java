@@ -1,4 +1,4 @@
-package com.example.ancos_binoxxo.ui.notifications;
+package com.anncodesign.ancos_binoxxo.ui.notifications;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.ancos_binoxxo.databinding.FragmentNotificationsBinding;
+import com.anncodesign.ancos_binoxxo.databinding.FragmentNotificationsBinding;
 
 public class NotificationsFragment extends Fragment {
 

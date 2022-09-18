@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ancos_binoxxo">
+    package="com.anncodesign.ancos_binoxxo">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name="com.example.ancos_binoxxo.MainActivity"
+            android:name="com.anncodesign.ancos_binoxxo.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -19,8 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ancos_binoxxo.CheckActivity"> </activity>
-        <activity android:name="com.example.ancos_binoxxo.AboutActivity"> </activity>
+        <activity android:name="com.anncodesign.ancos_binoxxo.CheckActivity"> </activity>
+        <activity android:name="com.anncodesign.ancos_binoxxo.AboutActivity"> </activity>
     </application>
 
 </manifest>

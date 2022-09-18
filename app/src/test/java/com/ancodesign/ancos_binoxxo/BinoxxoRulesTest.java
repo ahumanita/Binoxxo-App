@@ -1,4 +1,4 @@
-package com.example.ancos_binoxxo;
+package com.anncodesign.ancos_binoxxo;
 
 import org.junit.Assert;
 import org.junit.Test;

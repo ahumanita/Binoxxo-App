@@ -1,6 +1,6 @@
-package com.example.ancos_binoxxo;
+package com.anncodesign.ancos_binoxxo;
 
-import com.example.ancos_binoxxo.databinding.ActivityMainBinding;
+import com.anncodesign.ancos_binoxxo.databinding.ActivityMainBinding;
 
 import android.content.Context;
 import android.content.SharedPreferences;

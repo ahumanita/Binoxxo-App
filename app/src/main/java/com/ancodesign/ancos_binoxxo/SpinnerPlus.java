@@ -1,4 +1,4 @@
-package com.example.ancos_binoxxo;
+package com.anncodesign.ancos_binoxxo;
 
 import android.content.Context;
 import android.util.AttributeSet;

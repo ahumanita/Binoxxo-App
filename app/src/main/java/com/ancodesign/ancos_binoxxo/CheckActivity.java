@@ -1,4 +1,4 @@
-package com.example.ancos_binoxxo;
+package com.anncodesign.ancos_binoxxo;
 
 import android.content.Intent;
 import android.graphics.Color;

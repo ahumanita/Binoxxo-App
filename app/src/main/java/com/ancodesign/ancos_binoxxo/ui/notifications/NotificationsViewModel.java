@@ -1,4 +1,4 @@
-package com.example.ancos_binoxxo.ui.notifications;
+package com.anncodesign.ancos_binoxxo.ui.notifications;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
